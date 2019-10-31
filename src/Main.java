@@ -2,16 +2,8 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
-        // 변수, 객체(개체), 오브젝트, 인스턴스
-        // 클래스
-        // (멤버)필드 == 변수
-        // 메서드 == 함수
-
-        // Application Programming Interface
-        // Software Development Kit
-        // Library vs. Framework
-
         // 1. 정답을 생성한다.
         Random random = new Random(0);
 
@@ -20,9 +12,9 @@ public class Main {
         int answer2;
 
         while (true) {
-            answer0 = random.nextInt(10);
-            answer1 = random.nextInt(10);
-            answer2 = random.nextInt(10);
+            answer0 = random.nextInt(Constant.MAX_NUMBER);
+            answer1 = random.nextInt(Constant.MAX_NUMBER);
+            answer2 = random.nextInt(Constant.MAX_NUMBER);
 
             if (answer0 == answer1 || answer1 == answer2 || answer2 == answer0)
                 continue;
@@ -92,7 +84,7 @@ public class Main {
 
 
             // 5. 3S 아니면 2번으로 돌아간다.
-            if (strike == 3)
+            if (strike == Constant.DIGIT)
                 break;
         }
 

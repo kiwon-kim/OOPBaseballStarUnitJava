@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -6,6 +8,29 @@ public class Main {
     public static void main(String[] args) {
         // 1. 정답을 생성한다.
         Random random = new Random(0);
+
+        ArrayList<Integer> answers = new ArrayList<>();
+        answers.add(1);
+        answers.add(2);
+        answers.add(3);
+
+        for (int i = 0; i < answers.size(); i++) {
+            answers.set(i, i);
+        }
+        for (int answer : answers) {
+            System.out.println(answer);
+        }
+
+        HashSet<Integer> set = new HashSet<>();
+        set.add(1);
+        set.add(2);
+        set.add(3);
+        for (int answer : set) {
+            System.out.println(answer);
+        }
+
+        }
+
 
         int answer0;
         int answer1;

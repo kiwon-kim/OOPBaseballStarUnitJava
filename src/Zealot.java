@@ -1,9 +1,14 @@
 public class Zealot {
+    public Zealot() {
+        hp = 100;
+        shield = 50;
+    }
+
     private int hp;
     private int shield;
 
     public void getDamaged(int damage) {
-        while (shield > 0) {
+        while (shield > 0 && damage > 0) {
             shield--;
             damage--;
         }

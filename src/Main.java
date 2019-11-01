@@ -6,6 +6,7 @@ public class Main {
     public static void main(String[] args) {
         // 1. 정답을 생성한다.
         Answer answer = new Answer();
+        // TODO : event
         answer.create();
         answer.print();
 
@@ -24,7 +25,7 @@ public class Main {
             result.calculate(answer, guess);
 
             // 4. 결과를 출력한다.
-            System.out.println(result.getText());
+            System.out.println(result);
 
             // 5. 3S 아니면 2번으로 돌아간다.
             if (result.isCorrect())

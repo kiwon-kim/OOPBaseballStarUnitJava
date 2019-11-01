@@ -1,5 +1,7 @@
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Random;
+import java.util.Set;
 
 public class Answer extends NumberContainer{
     void create() {
@@ -9,8 +11,8 @@ public class Answer extends NumberContainer{
             for (int i = 0; i < Constant.DIGIT; i++)
                 numbers.add(random.nextInt(Constant.MAX_NUMBER));
 
-            //TODO : 자릿수에 무관하게 구현하여야 함
-            if (get(0) == get(1) || get(1) == get(2) || get(2) == get(1))
+            Set<Integer> set = toSet();
+            if (set.size() != Constant.DIGIT)
                 continue;
 
             break;

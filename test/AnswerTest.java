@@ -14,12 +14,22 @@ public class AnswerTest {
     }
 
     @Test
-    void 공격을_받으면_쉴드가_먼저_감소한_후_HP가_감소함(){
+    void 쉴드보다_큰_공격을_받으면_쉴드가_먼저_감소한_후_HP가_감소함(){
         // TDD
         Zealot zealot = new Zealot(); // 100 / 50
         zealot.getDamaged(70);
 
         assertEquals(0, zealot.getShield());
         assertEquals(80, zealot.getHp());
+    }
+
+    @Test
+    void 쉴드보다_작_공격을_받으면_쉴드만_감소해야함_(){
+        // TDD
+        Zealot zealot = new Zealot(); // 100 / 50
+        zealot.getDamaged(30);
+
+        assertEquals(20, zealot.getShield());
+        assertEquals(100, zealot.getHp());
     }
 }

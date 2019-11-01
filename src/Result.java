@@ -21,8 +21,8 @@ class Result {
         return strike == Constant.DIGIT;
     }
 
-    //TODO : toString()
-    String getText() {
+    @Override
+    public String toString() {
         return String.format("S:%d B:%d O:%d", strike, ball, out);
     }
 

@@ -1,9 +1,7 @@
 import java.util.ArrayList;
 import java.util.Random;
 
-public class Answer {
-    private ArrayList<Integer> numbers = new ArrayList<>();
-
+public class Answer extends NumberContainer{
     void create() {
         Random random = new Random(0);
 
@@ -12,22 +10,18 @@ public class Answer {
                 numbers.add(random.nextInt(Constant.MAX_NUMBER));
 
             //TODO : 자릿수에 무관하게 구현하여야 함
-            if (numbers.get(0) == numbers.get(1) || numbers.get(1) == numbers.get(2) || numbers.get(2) == numbers.get(1))
+            if (get(0) == get(1) || get(1) == get(2) || get(2) == get(1))
                 continue;
 
             break;
         }
     }
 
+    @Override
     void print() {
         System.out.println("[정답]");
         for (int number : numbers)
             System.out.print(number + " ");
         System.out.println();
-    }
-
-    // wrapper method
-    int get(int index) {
-        return numbers.get(index);
     }
 }

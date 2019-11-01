@@ -1,4 +1,4 @@
-public class ProtossUnit extends Unit {
+public abstract class ProtossUnit extends Unit {
     protected int shield;
 
     public int getShield() {
@@ -13,5 +13,10 @@ public class ProtossUnit extends Unit {
         }
 
         super.getDamaged(damage);
+    }
+
+    @Override
+    public String getStatusText() {
+        return String.format("HP : %d, Shield : %d", hp, shield);
     }
 }

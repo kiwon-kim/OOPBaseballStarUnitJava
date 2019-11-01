@@ -4,5 +4,8 @@ public class DarkTemplar extends ProtossUnit {
         shield = 100;
     }
 
-
+    @Override
+    public String getNameCore() {
+        return "Dark Templar";
+    }
 }

@@ -20,6 +20,11 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        Cloakable player = new Player();
+        cloak(player);
+
+        Unit m3 = new Marine();
+
         Abiter abiter = new Abiter();
         cloak(abiter);
         flyAndReturn(abiter, 1, 2);

@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -22,11 +21,7 @@ public class Main {
             break;
         }
 
-        // live template
-        System.out.println("[정답]");
-        for (int answer : answers)
-            System.out.print(answer + " ");
-        System.out.println();
+        printNumbers(answers, "정답");
 
 
         int tryCount = 0;
@@ -41,10 +36,7 @@ public class Main {
             for (int i = 0; i < Constant.DIGIT; i++)
                 guesses.add(scanner.nextInt()); // parsing
 
-            System.out.println("[추측]");
-            for(int guess : guesses)
-                System.out.print(guess + " ");
-            System.out.println();
+            printNumbers(guesses, "추측");
 
 
             // 3. 결과를 계산한다.
@@ -75,5 +67,13 @@ public class Main {
 
         // 6. 도전횟수를 출력한다.
         System.out.println(String.format("Count : %d", tryCount));
+    }
+
+    private static void printNumbers(ArrayList<Integer> numbers, String prefix) {
+        System.out.println("[" + prefix + "]");
+        for (int number : numbers)
+            System.out.print(number + " ");
+        System.out.println();
+
     }
 }

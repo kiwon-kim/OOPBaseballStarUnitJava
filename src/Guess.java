@@ -1,8 +1,8 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Guess {
-    ArrayList<Integer> numbers = new ArrayList<>();
+class Guess {
+    private ArrayList<Integer> numbers = new ArrayList<>();
 
     void input() {
         Scanner scanner = new Scanner(System.in);
@@ -17,7 +17,7 @@ public class Guess {
         System.out.println();
     }
 
-    public int get(int index) {
+    int get(int index) {
         return numbers.get(index);
     }
 }

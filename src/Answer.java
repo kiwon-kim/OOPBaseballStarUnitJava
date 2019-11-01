@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Answer {
-    ArrayList<Integer> numbers = new ArrayList<>();
+    private ArrayList<Integer> numbers = new ArrayList<>();
 
     void create() {
         Random random = new Random(0);
@@ -27,7 +27,7 @@ public class Answer {
     }
 
     // wrapper method
-    public int get(int index) {
+    int get(int index) {
         return numbers.get(index);
     }
 }

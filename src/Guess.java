@@ -9,10 +9,7 @@ class Guess extends NumberContainer {
     }
 
     @Override
-    void print() {
-        System.out.println("[추측]");
-        for (int number : numbers)
-            System.out.print(number + " ");
-        System.out.println();
+    String getPrefix() {
+        return "추측";
     }
 }

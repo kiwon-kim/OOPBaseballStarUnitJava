@@ -5,7 +5,15 @@ public abstract class NumberContainer {
 
     // 가상 == 재정의 할 수 있는 (overridable)
 
-    abstract void print();
+    abstract String getPrefix();
+
+    // template method
+    void print() {
+        System.out.println("[" + getPrefix() + "]");
+        for (int number : numbers)
+            System.out.print(number + " ");
+        System.out.println();
+    }
 
     // wrapper method
     int get(int index) {

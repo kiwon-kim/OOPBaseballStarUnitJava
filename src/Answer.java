@@ -18,10 +18,7 @@ public class Answer extends NumberContainer{
     }
 
     @Override
-    void print() {
-        System.out.println("[정답]");
-        for (int number : numbers)
-            System.out.print(number + " ");
-        System.out.println();
+    String getPrefix() {
+        return "정답";
     }
 }

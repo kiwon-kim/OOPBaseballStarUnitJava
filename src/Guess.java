@@ -12,4 +12,10 @@ class Guess extends NumberContainer {
     String getPrefix() {
         return "추측";
     }
+
+    void setNumbers(int... numbers){
+        for (int number : numbers)
+            this.numbers.add(number);
+
+    }
 }

@@ -5,6 +5,18 @@ class Result {
     private int ball = 0;
     private int out = 0;
 
+    public int getStrike() {
+        return strike;
+    }
+
+    public int getBall() {
+        return ball;
+    }
+
+    public int getOut() {
+        return out;
+    }
+
     boolean isCorrect() {
         return strike == Constant.DIGIT;
     }

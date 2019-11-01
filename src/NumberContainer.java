@@ -1,4 +1,7 @@
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
 
 public abstract class NumberContainer {
     protected ArrayList<Integer> numbers = new ArrayList<>();
@@ -18,5 +21,9 @@ public abstract class NumberContainer {
     // wrapper method
     int get(int index) {
         return numbers.get(index);
+    }
+
+    Set<Integer> toSet(){
+        return new HashSet<>(numbers);
     }
 }
